@@ -1,17 +1,15 @@
-import { useRef} from 'react'
-import { useHistory } from 'react-router-dom'
+import {useRef} from 'react'
+import {useHistory} from 'react-router-dom'
 
 import './styles/styles.css'
 import {Container, Form, Button, Row, Col, Nav} from 'react-bootstrap';
 import {Navigation} from "./components/Navigation";
 
+export function Dashboard() {
 
-export function Dashboard(){
-
-    return(
-
+    return (
         <>
-        <Navigation />
+            <Navigation/>
             <span>Hoi es worked</span>
         </>
     );
