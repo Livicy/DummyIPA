@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import {AuthProvider} from './components/Auth';
-import {PrivateRoute, LoggedOutRoute} from './components/CustomRoute';
+import {UserRoute, NonUserRoute} from './components/CustomRoute';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,9 +15,9 @@ export function App() {
         <Router>
             <AuthProvider>
                 <Switch>
-                    <PrivateRoute exact path='/dashboard' component={Dashboard}/>
-                    <LoggedOutRoute exact path="/signup" component={Signup}/>
-                    <LoggedOutRoute exact path="/login" component={Login}/>
+                    <UserRoute exact path='/dashboard' component={Dashboard}/>
+                    <NonUserRoute exact path="/signup" component={Signup}/>
+                    <NonUserRoute exact path="/login" component={Login}/>
                     <Route exact path="*" render={() => (<Redirect to="/login"/>)}/>
                 </Switch>
             </AuthProvider>

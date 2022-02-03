@@ -10,7 +10,6 @@ export function Dashboard() {
     return (
         <>
             <Navigation/>
-            <span>Hoi es worked</span>
         </>
     );
 }
